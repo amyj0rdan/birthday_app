@@ -21,8 +21,13 @@ feature 'welcome page' do
     expect(page).to have_content "When's your birthday?"
   end
 
-  scenario 'user can fill in birthday' do
+  scenario 'user can fill in day of birthday' do
     visit('/')
     page.fill_in 'day', with: '10'
+  end
+
+  scenario 'user can fill in month of birthday' do
+    visit('/')
+    page.select("October", from: "months")
   end
 end

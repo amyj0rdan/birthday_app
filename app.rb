@@ -26,6 +26,10 @@ class Birthday < Sinatra::Base
 
     @countdown = (birthday - today)/(60*60*24)
 
+    if @countdown == 0 || @countdown < 0
+      @countdown += 365
+    end
+
     erb :countdown
   end
 

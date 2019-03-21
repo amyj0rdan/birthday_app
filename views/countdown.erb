@@ -11,7 +11,7 @@
   }
 </style>
 
-<% if @countdown < 0 %>
+<% if @countdown.ceil == 365 %>
 Happy birthday <%= @name %>!
 <% else %>
 Your birthday is in <%= @countdown.ceil %> days, <%= @name %>!

@@ -19,14 +19,11 @@
 <body>
   <h1>Hello there!</h1>
   <h2>What's your name?</h2>
-  <form>
+  <form action='/details' method='post'>
     <input type="text" name="name"/>
-    </form>
-  <h2>When's your birthday?</h2>
-  <form>
+    <h2>When's your birthday?</h2>
     day: <input type="text" name="day"/>
-    </form>
-  <select name="months">
+  <select name="month">
     <option value="january">January</option>
     <option value="february">February</option>
     <option value="march">March</option>
@@ -40,4 +37,6 @@
     <option value="november">November</option>
     <option value="december">December</option>
   </select>
+  <input type='submit' value='Go!' />
+  </form>
 </body>

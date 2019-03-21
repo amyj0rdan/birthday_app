@@ -10,6 +10,20 @@ class Birthday < Sinatra::Base
     erb :index
   end
 
+  post '/details' do
+    session[:name] = params[:name]
+    session[:day] = params[:day]
+    session[:month] = params[:month]
+    redirect '/countdown'
+  end
+
+  get '/countdown' do
+    @name = session[:name]
+    @day = session[:day]
+    @month = session[:month]
+    erb :countdown
+  end
+
   run! if app_file == $0
-  
+
 end

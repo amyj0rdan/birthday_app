@@ -11,7 +11,7 @@ feature 'welcome page' do
     expect(page).to have_content "What's your name?"
   end
 
-  scenario 'users fills in birthday' do
+  scenario 'user can fill in name' do
     visit('/')
     page.fill_in 'name', with: 'Amy'
   end
@@ -19,5 +19,10 @@ feature 'welcome page' do
   scenario "asks When's your birthday?" do
     visit('/')
     expect(page).to have_content "When's your birthday?"
+  end
+
+  scenario 'user can fill in birthday' do
+    visit('/')
+    page.fill_in 'day', with: '10'
   end
 end

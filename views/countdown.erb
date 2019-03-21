@@ -11,4 +11,8 @@
   }
 </style>
 
-<h1><%= @name %>, your birthday is <%= @day %> <%= @month.capitalize %></h1>
+<% if @countdown < 0 %>
+Happy birthday <%= @name %>!
+<% else %>
+Your birthday is in <%= @countdown.ceil %> days, <%= @name %>!
+<% end %>

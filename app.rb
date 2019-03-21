@@ -21,6 +21,11 @@ class Birthday < Sinatra::Base
     @name = session[:name]
     @day = session[:day]
     @month = session[:month]
+    today = Time.now
+    birthday = Time.new(2019,@month,@day)
+
+    @countdown = (birthday - today)/(60*60*24)
+
     erb :countdown
   end
 

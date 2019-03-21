@@ -1,18 +1,14 @@
-<style>
-  body {
-    text-align:center;
-    font-family:arial;
-    background-color:lightcyan
-  }
+<head>
+  <link rel = "stylesheet"
+     type = "text/css"
+     href = "stylesheet.css" />
+     <title>Birthday countdown</title>
+</head>
 
-  h1 {
-    padding: 30;
-    margin: 30
-  }
-</style>
-
+<body>
 <% if @countdown.ceil == 365 %>
 Happy birthday <%= @name %>!
 <% else %>
 Your birthday is in <%= @countdown.ceil %> days, <%= @name %>!
 <% end %>
+</body>

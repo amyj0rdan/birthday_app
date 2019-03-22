@@ -6,9 +6,13 @@
 </head>
 
 <body>
-<% if @countdown.ceil == 365 %>
-Happy birthday <%= @name %>!
-<% else %>
-Your birthday is in <%= @countdown.ceil %> days, <%= @name %>!
-<% end %>
+  <div class="container">
+    <div class="content">
+      <% if @countdown.ceil == 365 %>
+      <h1>Happy birthday <%= @name %>!</h1>
+      <% else %>
+      <h1>Your birthday is in <%= @countdown.ceil %> days, <%= @name %>!</h1>
+      <% end %>
+    </div>
+  </div>
 </body>

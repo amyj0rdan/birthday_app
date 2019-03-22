@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+
 body {
   text-align:center;
-  font-family:arial;
-  background-color:lightcyan;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight:200;
+  background-color:MintCream;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2 {
+  padding: 5;
 }
 
 h1 {
-  padding: 30;
-  margin: 30;
+  font-size: 50px;
 }
 
 h2 {
-  padding: 15;
-  margin: 15;
+  font-size: 30px;
 }

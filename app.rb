@@ -14,7 +14,11 @@ class Birthday < Sinatra::Base
     session[:name] = params[:name]
     session[:day] = params[:day]
     session[:month] = params[:month]
-    redirect '/countdown'
+    if !params[:day].empty?
+      redirect '/countdown'
+    else
+      redirect '/oops'
+    end
   end
 
   get '/countdown' do
@@ -31,6 +35,10 @@ class Birthday < Sinatra::Base
     end
 
     erb :countdown
+  end
+
+  get '/oops' do
+    erb :oops
   end
 
   run! if app_file == $0
